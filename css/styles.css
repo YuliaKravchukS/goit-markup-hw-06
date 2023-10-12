@@ -31,13 +31,14 @@ img {
 }
 
 .container {
-  width: 1158px;
+  width: 100%;
+  max-width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
 }
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .visually-hidden {
@@ -229,20 +230,26 @@ button {
 .feature-container {
 }
 .feature h3 {
+  text-align: center;
   color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  text-transform: capitalize;
 }
 
 .feature-list {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 .feature-list-item {
-  width: calc((100% - 72px) / 4);
+  width: 100%;
+  /* width: calc((100% - 72px) / 4); */
 }
 
 .feature-list-text {
@@ -255,7 +262,7 @@ button {
 .feature-icon {
 }
 .feature-icon-box {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   height: 112px;
@@ -443,7 +450,7 @@ button {
 /* ======================================= */
 
 /* ====================Footer=================== */
-
+/* 
 .footer {
   background-color: #2e2f42;
   padding: 100px 0;
@@ -559,7 +566,7 @@ button {
 .footer-subscribe-icon {
   fill: #fff;
   margin-left: 16px;
-}
+} */
 
 /* ======================================= */
 
@@ -776,4 +783,45 @@ button {
 .hero-form-btn:hover,
 .hero-form-btn:focus {
   background-color: #404bbf;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 318px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+
+  .feature-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .container {
+    max-width: 1166px;
+  }
+
+  .feature h3 {
+    color: #2e2f42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+  .feature-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .feature-icon-box {
+    display: flex;
+  }
 }
