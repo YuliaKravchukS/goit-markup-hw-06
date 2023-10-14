@@ -453,19 +453,22 @@ button {
 /* ======================================= */
 
 /* ====================Footer=================== */
-/* 
+
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px;
+  /* align-items: baseline; */
 }
 
 .footer-block-right {
-  margin-right: 120px;
+  /* margin-right: 120px; */
 }
 .footer-link {
   color: #4d5ae5;
@@ -477,16 +480,20 @@ button {
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 16px;
+  
 }
 
 .footer-logo {
   color: #f4f4fd;
+  
 }
 .footer-text {
   color: #f4f4fd;
   letter-spacing: 0.02em;
   line-height: 1.5;
-  width: 264px;
+  /* width: 264px; */
+  width: 100%;
+  
 }
 
 .footer-soc-tittle {
@@ -498,7 +505,7 @@ button {
 }
 
 .footer-social-link {
-  display: flex;
+  display: flex; 
   gap: 16px;
   justify-content: center;
 }
@@ -508,9 +515,9 @@ button {
   background-color: #31d0aa;
 }
 
-.footer-subscribe {
+/* .footer-subscribe {
   margin-left: auto;
-}
+} */
 
 .footer-subscribe-text {
   margin-bottom: 16px;
@@ -522,7 +529,9 @@ button {
 
 .footer-form {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
 }
 
 .footer-input {
@@ -569,7 +578,7 @@ button {
 .footer-subscribe-icon {
   fill: #fff;
   margin-left: 16px;
-} */
+}
 
 /* ======================================= */
 
@@ -840,6 +849,18 @@ button {
   .portfolio-list-item {
   width: calc((100% - 24px) / 2);
   }
+  
+  .footer-container {
+    gap: 72px 24px;
+    width: calc((100%-24px) / 2);
+  }
+
+  .footer-text{
+   width: 264px;
+  }
+
+
+
 }
 
 @media screen and (min-width: 1158px) {
@@ -882,11 +903,31 @@ button {
     row-gap: 48px;
   }
 
- .portfolio-list-item {
+  .portfolio-list-item {
   width: calc((100% - 48px) / 3);
   }
   .overlay {
   display: block;
   }
+
+  .footer {
+  padding: 100px 0;
+  }
+
+  .footer-container {
+  flex-wrap: nowrap;
+  gap: 0;
+  align-items: baseline;
+  }
+  .footer-block-right {
+  margin-right: 120px;
+  }
+  /* .footer-text {
+  width: 264px;
+  } */
+ 
+  .footer-subscribe {
+  margin-left: auto;
+}
 
 }
