@@ -168,18 +168,31 @@ button {
 
 .hero {
   background-color: #2e2f42;
-  padding: 188px 0;
+  /* padding: 188px 0; */
+  padding: 72px 0;
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/fon-hero.jpg);
+    url(../images/hero-mob-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1440px;
   margin: 0 auto;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-mob-2x.jpg);
+  }
 }
 
 .hero-container {
@@ -386,7 +399,7 @@ button {
 }
 
 .portfolio-list-item {
-  width: 100%
+  width: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -478,14 +491,12 @@ button {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  display: inline-block;
+  display: block;
   margin-bottom: 16px;
-  
 }
 
 .footer-logo {
   color: #f4f4fd;
-  
 }
 .footer-text {
   color: #f4f4fd;
@@ -493,7 +504,6 @@ button {
   line-height: 1.5;
   /* width: 264px; */
   width: 100%;
-  
 }
 
 .footer-soc-tittle {
@@ -505,7 +515,7 @@ button {
 }
 
 .footer-social-link {
-  display: flex; 
+  display: flex;
   gap: 16px;
   justify-content: center;
 }
@@ -530,7 +540,7 @@ button {
 .footer-form {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
   justify-content: center;
 }
 
@@ -801,8 +811,46 @@ button {
   .team .container {
     max-width: 294px;
   }
+
+  @media screen and (max-width: 767px) {
+    .footer-link {
+      width: 100%;
+      text-align: center;
+    }
+
+    .footer-soc-tittle {
+      text-align: center;
+    }
+
+    .footer-subscribe-text {
+      text-align: center;
+    }
+  }
 }
+
 @media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-tab-1x.jpg);
+    padding-top: 112px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-tab-2x.jpg);
+    }
+  }
   .container {
     max-width: 736px;
     padding: 0;
@@ -847,23 +895,50 @@ button {
   }
 
   .portfolio-list-item {
-  width: calc((100% - 24px) / 2);
+    width: calc((100% - 24px) / 2);
   }
-  
+
   .footer-container {
-    gap: 72px 24px;
-    width: calc((100%-24px) / 2);
+    /* gap: 72px 24px;
+    width: calc((100%-24px) / 2); */
   }
 
-  .footer-text{
-   width: 264px;
+  .footer-text {
+    width: 264px;
   }
 
+  .footer-social-link {
+  }
 
-
+  .footer-form {
+    gap: 24px;
+    justify-content: flex-start;
+  }
 }
 
 @media screen and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/fon-hero.jpg);
+    padding-top: 188px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-2x.jpg);
+    }
+  }
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -904,30 +979,29 @@ button {
   }
 
   .portfolio-list-item {
-  width: calc((100% - 48px) / 3);
+    width: calc((100% - 48px) / 3);
   }
   .overlay {
-  display: block;
+    display: block;
   }
 
   .footer {
-  padding: 100px 0;
+    padding: 100px 0;
   }
 
   .footer-container {
-  flex-wrap: nowrap;
-  gap: 0;
-  align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 0;
+    align-items: baseline;
   }
   .footer-block-right {
-  margin-right: 120px;
+    margin-right: 120px;
   }
   /* .footer-text {
   width: 264px;
   } */
- 
-  .footer-subscribe {
-  margin-left: auto;
-}
 
+  .footer-subscribe {
+    margin-left: auto;
+  }
 }
