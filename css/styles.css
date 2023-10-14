@@ -525,9 +525,8 @@ button {
   background-color: #31d0aa;
 }
 
-/* .footer-subscribe {
-  margin-left: auto;
-} */
+.footer-subscribe {
+}
 
 .footer-subscribe-text {
   margin-bottom: 16px;
@@ -899,8 +898,7 @@ button {
   }
 
   .footer-container {
-    /* gap: 72px 24px;
-    width: calc((100%-24px) / 2); */
+    gap: 72px 24px;
   }
 
   .footer-text {
