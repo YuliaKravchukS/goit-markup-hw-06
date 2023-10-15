@@ -74,6 +74,7 @@ button {
 .container-header {
   display: flex;
   align-items: center;
+  /* padding: 0 15px; */
 }
 .header-nav {
   display: flex;
@@ -106,6 +107,7 @@ button {
 }
 
 .header-menu-item {
+  display: none;
 }
 .header-menu-link {
   position: relative;
@@ -132,6 +134,7 @@ button {
   width: 100%;
 }
 .address {
+  display: none;
   margin-left: auto;
   font-style: normal;
 }
@@ -140,7 +143,8 @@ button {
 }
 .address-list {
   display: flex;
-  gap: 40px;
+  flex-direction: column-reverse;
+  gap: 24px;
 }
 .address-list-item {
   display: inline-block;
@@ -162,6 +166,17 @@ button {
   color: #404bbf;
 }
 
+.btn-menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-menu-icon {
+  fill: #2f2f37;
+}
 /* ======================================= */
 
 /* ====================HERO=================== */
@@ -828,6 +843,30 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .header-nav-logo {
+    margin-right: 120px;
+  }
+  .header-menu-item {
+    display: flex;
+  }
+  .address {
+    display: flex;
+  }
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .address-list-link {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
+
+  .btn-menu {
+    display: none;
+  }
+
   .hero {
     background-image: linear-gradient(
         to bottom,
@@ -867,12 +906,16 @@ button {
     width: calc((100% - 24px) / 2);
   }
 
-  .feature-list-text {
-    font-weight: 500;
-  }
   @media screen and (max-width: 1158px) {
+    .feature-list-text {
+      font-weight: 500;
+    }
+
     .feature-list-item:first-child {
       padding-right: 40px;
+    }
+    .footer-subscribe {
+      width: 496px;
     }
   }
 
@@ -908,13 +951,25 @@ button {
   .footer-social-link {
   }
 
+  .footer-subscribe {
+  }
+
   .footer-form {
     gap: 24px;
-    justify-content: flex-start;
+    width: max-content;
   }
 }
 
 @media screen and (min-width: 1158px) {
+  .header-nav-logo {
+    margin-right: 76px;
+  }
+
+  .address-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
   .hero {
     background-image: linear-gradient(
         to bottom,
@@ -944,6 +999,7 @@ button {
   .container,
   .team .container {
     max-width: 1158px;
+    padding: 0 15px;
   }
 
   .feature h3 {
@@ -989,17 +1045,19 @@ button {
 
   .footer-container {
     flex-wrap: nowrap;
-    gap: 0;
     align-items: baseline;
+    gap: 0;
   }
   .footer-block-right {
     margin-right: 120px;
   }
-  /* .footer-text {
-  width: 264px;
-  } */
 
   .footer-subscribe {
     margin-left: auto;
+  }
+
+  .footer-form {
+    gap: 24px;
+    justify-content: center;
   }
 }
