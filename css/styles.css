@@ -360,7 +360,6 @@ button {
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  text-transform: capitalize;
   margin: 0 auto 72px;
   max-width: 496px;
 }
@@ -973,6 +972,7 @@ button {
   @media screen and (max-width: 767px) {
     .hero-tittle {
       width: 220px;
+      text-transform: capitalize;
     }
     .footer-link {
       width: 100%;
