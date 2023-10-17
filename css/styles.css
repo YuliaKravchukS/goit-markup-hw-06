@@ -151,11 +151,10 @@ button {
 }
 .address-list-link {
   color: #434455;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
   letter-spacing: 0.02em;
-  font-style: normal;
-  line-height: 1.5;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -172,6 +171,7 @@ button {
   margin-left: auto;
   background-color: transparent;
   border: none;
+  padding: 16px 0;
 }
 
 .btn-menu-icon {
@@ -233,7 +233,7 @@ button {
 }
 .mob-menu-list {
 }
-.mob-menu-item {
+.mob-menu-item:not(:last-child) {
   margin-bottom: 40px;
 }
 
@@ -356,11 +356,12 @@ button {
 .hero-tittle {
   color: #fff;
   text-align: center;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  margin: 0 auto 48px;
+  text-transform: capitalize;
+  margin: 0 auto 72px;
   max-width: 496px;
 }
 
@@ -962,12 +963,17 @@ button {
   background-color: #404bbf;
 }
 
+/* ------------------Media------------------------------ */
+
 @media screen and (min-width: 320px) {
   .team .container {
     max-width: 294px;
   }
 
   @media screen and (max-width: 767px) {
+    .hero-tittle {
+      width: 220px;
+    }
     .footer-link {
       width: 100%;
       text-align: center;
@@ -1033,6 +1039,13 @@ button {
         ),
         url(../images/hero-tab-2x.jpg);
     }
+  }
+
+  .hero-tittle {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    margin-bottom: 36px;
   }
   .container {
     max-width: 736px;
@@ -1119,6 +1132,12 @@ button {
     flex-direction: row;
     gap: 40px;
   }
+  .address-list-link {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+
   .hero {
     background-image: linear-gradient(
         to bottom,
@@ -1126,7 +1145,7 @@ button {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/fon-hero.jpg);
-    padding-top: 188px;
+    padding: 188px 0;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -1140,6 +1159,10 @@ button {
         ),
         url(../images/people-office-2x.jpg);
     }
+  }
+
+  .hero-tittle {
+    margin-bottom: 48px;
   }
   .section {
     padding-top: 120px;
